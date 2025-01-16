@@ -16,10 +16,7 @@ body {
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    opacity: 0; 
-    transform: translateY(20px); 
-    animation: fadeInUp 3s forwards; 
+    background-repeat: no-repeat; 
 }
 
 .btn{
@@ -100,13 +97,13 @@ body {
     justify-content: center;
 
 }
-.meal-item{
+.meal-item {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
     margin: 2rem 0;
     background-color: #FFFFF0;
-    opacity: 0; 
+    opacity: 0;
     transform: translateY(20px); 
     animation: fadeInUp 1s forwards; 
 }
@@ -141,20 +138,21 @@ body {
 
 .meal-details {
     position: fixed;
-    top: 25%; 
-    left: 50%; 
+    top: 50%;
+    left: 70%;
     transform: translate(-50%, -50%);
     color: #fff;
     background: #d65008b7;
     border-radius: 0.8rem;
     border: 2px #ffffff solid;
     width: 90%;
-    max-height: 80%; 
-    overflow-y: auto;
+    height: 90%;
+    overflow-y: scroll;
     display: none;
     padding: 2rem 0;
     opacity: 0; 
-    animation: fadeInUp 1s forwards;
+    transform: translate(50%, -50%);
+    animation: slideIn 1s forwards; 
 }
 .meal-details::-webkit-scrollbar{
     width: 10px;
@@ -188,7 +186,6 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0.9;
-    color: #a8410a;
 }
 .recipe-title{
     letter-spacing: 1px;
@@ -260,6 +257,7 @@ body {
     width: 100%;
 }
 
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
@@ -269,10 +267,16 @@ body {
 @keyframes fadeInUp {
     to {
         opacity: 1; 
-        transform: translateY(0);
+        transform: translateY(0); 
     }
 }
 
+@keyframes slideIn {
+    to {
+        opacity: 1; 
+        transform: translate(-50%, -50%);
+    }
+}
 
 @media screen and (min-width: 600px){
     .meal-search-box{
@@ -280,6 +284,7 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+
 }
 
 @media screen and (min-width: 768px){
